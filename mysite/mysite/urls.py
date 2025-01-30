@@ -16,16 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from myapp.views import myfeed
+from myapp.views import myfeed, create, profile, register
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
       # Подключение маршрутов приложения
     path('my-feed', myfeed),
+    path('create', create),
+    path('profile', profile),
+    path('register', register),
 ]
 # 
  
-urlpatterns = [
-    path('article/', include('myapp.urls')),  # Подключаем маршруты из приложения blog
-]
+# urlpatterns = [
+#     path('myapp/', include('myapp.urls')),  # Подключаем маршруты из приложения blog
+# ]
