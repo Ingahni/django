@@ -2,6 +2,6 @@
 .vscode
 __pycache__
 venv/
-djenv/
+djvenv/
 db.sqlite3
 .DS_Store
