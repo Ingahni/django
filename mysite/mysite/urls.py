@@ -29,6 +29,6 @@ urlpatterns = [
 ]
 # 
  
-# urlpatterns = [
-#     path('myapp/', include('myapp.urls')),  # Подключаем маршруты из приложения blog
-# ]
+urlpatterns = [
+    path('article_id/', include('myapp.urls')),  # Подключаем маршруты из приложения blog
+]

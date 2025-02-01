@@ -1,7 +1,7 @@
 
 # Create your views here.
 from django.http import HttpResponse, HttpRequest
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 
 
 
@@ -21,22 +21,17 @@ def register(request: HttpRequest) -> HttpResponse:
 
 
 
+def article_id(request, article_id):
+    return render(request, 'Cтраница, на которой будет отображаться статья по id.')
 
+def comment(request, comment):
+    return render(request, 'Адрес, который мы будем использовать для написания комментариев к статье.')
 
+def article_update(request, article_id):
+    
+    return render(request, 'Страница, которую мы будем использовать для изменения существующей статьи.')
 
-
-# def article_detail(request, article_id):
-#     return render(request, 'article_detail.html',)
-
-# def article_comment(request, article_id):
-#     article = get_object_or_404(Article, id=article_id)
-#     return render(request, 'article_comment.html', {'article': article})
-
-# def article_update(request, article_id):
-#     article = get_object_or_404(Article, id=article_id)
-#     return render(request, 'article_update.html', {'article': article})
-
-# def article_delete(request, article_id):
-#     article = get_object_or_404(Article, id=article_id)
-#     article.delete()
-#     return redirect('/')  # После удаления перенаправляем на главную страницу
+def article_delete(request, article_id):
+    
+    article.delete('Адрес, который мы будем использовать для удаления статьи')
+    return redirect('/')  # После удаления перенаправляем на главную страницу
