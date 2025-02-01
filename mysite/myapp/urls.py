@@ -1,10 +1,10 @@
 
-from django.urls import path
-from myapp.views import article_comment, article_delete, article_update, article_id
+from django.urls import path, include
+from myapp.views import comment, delete, update
 
-urlpatterns = [
-    path('<int:article_id>/', article_id),
-    path('<int:article_id>/comment/', comment, name='comment'),
-    path('<int:article_id>/update/', article, name='update'),
-    path('<int:article_id>/delete/', article, name='delete'),
+urlpatterns = [path('<int:article_id>', include([
+    path('comment/', comment, name='comment'),
+    path('update/', update, name='update'),
+    path('delete/', delete, name='delete'),
+]))
 ]
