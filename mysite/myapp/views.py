@@ -1,9 +1,6 @@
 
 # Create your views here.
 from django.http import HttpResponse, HttpRequest
-from django.shortcuts import render, redirect
-
-
 
 
 def myfeed(request: HttpRequest) -> HttpResponse:
@@ -18,8 +15,6 @@ def profile(request: HttpRequest) -> HttpResponse:
 def register(request: HttpRequest) -> HttpResponse:
     return HttpResponse("Страница, регистрацией нового пользователя")
 
-
-
 def article_id(request: HttpRequest ):
     return HttpResponse(request, 'Cтраница, на которой будет отображаться статья по id.')
 
@@ -27,10 +22,7 @@ def comment(request: HttpRequest):
     return HttpResponse(request, 'Адрес, который мы будем использовать для написания комментариев к статье.')
 
 def update(request: HttpRequest):
-    
     return HttpResponse(request, 'Страница, которую мы будем использовать для изменения существующей статьи.')
 
 def delete(request: HttpRequest):
-    
-    return delete('Адрес, который мы будем использовать для удаления статьи')
-    # return redirect('/')  # После удаления перенаправляем на главную страницу
+    return HttpResponse('Адрес, который мы будем использовать для удаления статьи')

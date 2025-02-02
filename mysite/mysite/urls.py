@@ -21,14 +21,10 @@ from myapp.views import myfeed, create, profile, register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-      # Подключение маршрутов приложения
     path('my-feed', myfeed),
     path('create', create),
     path('profile', profile),
     path('register', register),
-]
-# 
- 
-urlpatterns = [
-    path('article_id/', include('myapp.urls')),  # Подключаем маршруты из приложения blog
+    path('int:article_id/', include('myapp.urls')),  # Подключаем маршруты из приложения 
+
 ]
