@@ -25,6 +25,8 @@ urlpatterns = [
     path('create', create),
     path('profile', profile),
     path('register', register),
-    path('int:article_id/', include('myapp.urls')),  # Подключаем маршруты из приложения 
+    
+]
 
+article_patterns = [path('int:article_id/', include('myapp.urls')),  # Подключаем маршруты из приложения 
 ]
