@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from myapp.views import myfeed, create, profile, register, topics, login
+from myapp.views import myfeed, create, profile, register, topics, login, logout
 
 
 urlpatterns = [
@@ -25,14 +25,10 @@ urlpatterns = [
     path('create', create),
     path('profile', profile),
     path('register', register),
+    path ('logout', logout),
     path ('topics', topics),
-    # path ('topics', topics),
-    # path ('topics', topics),
-    # path ('topics', topics),
-    # path ('topics', topics),
-    # path ('topics', topics),
     path ('login', login),
-    # path ('topics', topics),
+
 
     # path('article_id', {article_id}),
     
